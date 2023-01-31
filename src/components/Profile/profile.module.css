@@ -1,0 +1,24 @@
+
+
+.description {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.stats {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    display: block;
+   
+}
+.label {
+    display: block;
+}
+
+.quantity {
+    display: block;
+}
