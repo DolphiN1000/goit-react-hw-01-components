@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import user from './user.json';
-import  './profile.module.css';
+import './profile.module.css';
 
 const Profile = ({ username, tag, location, avatar, stats } = user) => {
   return (
@@ -10,11 +10,11 @@ const Profile = ({ username, tag, location, avatar, stats } = user) => {
           className="avatar"
           src={user.avatar}
           alt="User avatar"
-          height="512"
-          width="512"
+          height="300"
+          width="300"
         />
         <p className="name">{user.username}</p>
-        <p className="tag">{user.tag}</p>
+        <p className="tag">@{user.tag}</p>
         <p className="location">{user.location}</p>
       </div>
       <ul className="stats">
@@ -42,7 +42,7 @@ Profile.defualtProps = {
 };
 
 Profile.propTypes = {
-  // avatar: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
   username: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,

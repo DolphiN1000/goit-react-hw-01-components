@@ -1,24 +1,21 @@
-
-
 .description {
-    display: flex;
-    align-content: center;
-    align-items: center;
+  display: flex;
+  align-content: center;
+  align-items: center;
 }
 
 .stats {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
 }
 
 li {
-    display: block;
-   
+  display: block;
 }
 .label {
-    display: block;
+  display: block;
 }
 
 .quantity {
-    display: block;
+  display: block;
 }
