@@ -1,34 +1,34 @@
 import PropTypes from 'prop-types';
-import user from './user.json';
+// import user from './user.json';
 import './profile.module.css';
 
-const Profile = ({ username, tag, location, avatar, stats } = user) => {
+const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
     <div className="profile">
       <div className="description">
         <img
           className="avatar"
-          src={user.avatar}
+          src={avatar}
           alt="User avatar"
           height="300"
           width="300"
         />
-        <p className="name">{user.username}</p>
-        <p className="tag">@{user.tag}</p>
-        <p className="location">{user.location}</p>
+        <p className="name">{username}</p>
+        <p className="tag">@{tag}</p>
+        <p className="location">{location}</p>
       </div>
       <ul className="stats">
         <li>
           <span className="label">Followers</span>
-          <span className="quantity">{user.stats.followers}</span>
+          <span className="quantity">{stats.followers}</span>
         </li>
         <li>
           <span className="label">Views</span>
-          <span className="quantity">{user.stats.views}</span>
+          <span className="quantity">{stats.views}</span>
         </li>
         <li>
           <span className="label">Likes</span>
-          <span className="quantity">{user.stats.likes}</span>
+          <span className="quantity">{stats.likes}</span>
         </li>
       </ul>
     </div>
