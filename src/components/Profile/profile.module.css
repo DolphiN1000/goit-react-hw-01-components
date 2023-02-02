@@ -1,10 +1,10 @@
-.profile{
-    width: 330px;
-    height: 330px;
-    display: flex;
-    align-items: center;
-    background-color: aqua;
-    margin: 15, auto;
+.profile {
+  width: 330px;
+  height: 330px;
+  display: flex;
+  align-items: center;
+  background-color: aqua;
+  margin: 15, auto;
 }
 
 .description {
@@ -18,18 +18,18 @@
   display: flex;
 }
 
-li {
+/* li {
   display: block;
-}
+} */
 
 /* span {
   display: block;
 } */
 
-span.label {
+.label {
   display: block;
 }
 
-span.quantity {
+.quantity {
   display: block;
 }
