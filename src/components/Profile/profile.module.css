@@ -1,11 +1,10 @@
 .profile {
   width: 300px;
   height: auto;
-  /* display: flex;
-  align-items: center; */
   background-color: aqua;
-  margin: 15, auto;
+  margin: 15px, auto;
   text-align: center;
+  border-radius: 15px;
 }
 
 .description {
@@ -13,31 +12,30 @@
 }
 
 .name {
-  margin: 15, auto;
+  margin: 15px, auto;
 }
 
 .tag {
-  margin:15, auto;
+  margin: 15px, auto;
 }
 
 .loocation {
-  margin:15, auto;
+  margin: 15px, auto;
 }
-
-
 
 .stats {
   list-style: none;
   display: flex;
   justify-content: space-around;
-  margin: 15, auto;
-  padding: 0;
-  border: solid 1px gray;
+  margin: 15px;
+  padding: 15px;
+  gap: 30px;
+  border-top: solid 1px gray;
 }
-
 
 .label {
   display: block;
+  padding-bottom: 15px;
 }
 
 .quantity {

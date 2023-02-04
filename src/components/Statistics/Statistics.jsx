@@ -1,36 +1,50 @@
 import PropTypes from 'prop-types';
-import stats from './data.json';
-import './statistics.module.css'
+import styles from './statistics.module.css';
 
-const Statistics = (stats) => {
-    return(
-        <section class="statistics">
-  <h2 class="title">Upload stats</h2>
+const Statistics = ({ title, stats }) => {
+  const elements = stats.map(stat => {
+    return (
+      <li
+        class={styles.item}
+        style={{
+          backgroundColor: `#${Math.floor(Math.random() * 16777215).toString(
+            16
+          )}`,
+        }}
+        key={stat.id}
+      >
+        <span
+          class={styles.label}
+          style={{
+            color: `#${Math.floor(Math.random() * 16777215).toString(16)}`,
+          }}
+        >
+          {stat.label}
+        </span>
+        <span class={styles.percentage}>{stat.percentage}</span>
+      </li>
+    );
+  });
 
-  <ul class="stat-list">
-    <li class="item">
-      <span class="label">.docx</span>
-      <span class="percentage">4%</span>
-    </li>
-    <li class="item">
-      <span class="label">.mp3</span>
-      <span class="percentage">14%</span>
-    </li>
-    <li class="item">
-      <span class="label">.pdf</span>
-      <span class="percentage">41%</span>
-    </li>
-    <li class="item">
-      <span class="label">.mp4</span>
-      <span class="percentage">12%</span>
-    </li>
-  </ul>
-</section>
-    )
+  return (
+    <>
+      <section class={styles.statistics}>
+        <h2 class={styles.title}>{title}</h2>
+        <ul class={styles.list}>{elements}</ul>
+      </section>
+    </>
+  );
 };
 
 export default Statistics;
 
 Statistics.defaultProps = {
-    data: [],
-}
+  data: [],
+};
+
+Statistics.propTypes = {
+  title: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  percentage: PropTypes.number.isRequired,
+};

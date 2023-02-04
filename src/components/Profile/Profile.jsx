@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-// import user from './user.json';
 import styles from './profile.module.css';
 
 const Profile = ({ username, tag, location, avatar, stats }) => {
@@ -20,7 +19,7 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
       <ul className={styles.stats}>
         <li>
           <span className={styles.label}>Followers</span>
-        <span className={styles.quantity}>{stats.followers}</span>
+          <span className={styles.quantity}>{stats.followers}</span>
         </li>
         <li>
           <span className={styles.label}>Views</span>
