@@ -29,7 +29,7 @@ const Statistics = ({ title, stats }) => {
   return (
     <>
       <section class={styles.statistics}>
-        <h2 class={styles.title}>{title}</h2>
+        {title && <h2 class={styles.title}>{title}</h2>}
         <ul class={styles.list}>{elements}</ul>
       </section>
     </>
