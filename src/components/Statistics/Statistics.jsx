@@ -1,36 +1,17 @@
 import PropTypes from 'prop-types';
 import styles from './statistics.module.css';
+import ListItem from './ListItem/ListItem';
 
 const Statistics = ({ title, stats }) => {
-  const elements = stats.map(stat => {
-    return (
-      <li
-        class={styles.item}
-        style={{
-          backgroundColor: `#${Math.floor(Math.random() * 16777215).toString(
-            16
-          )}`,
-        }}
-        key={stat.id}
-      >
-        <span
-          class={styles.label}
-          style={{
-            color: `#${Math.floor(Math.random() * 16777215).toString(16)}`,
-          }}
-        >
-          {stat.label}
-        </span>
-        <span class={styles.percentage}>{stat.percentage}</span>
-      </li>
-    );
-  });
+  const elements = stats.map(stat => (
+    <ListItem key={stat.id} label={stat.label} percentage={stat.percentage} />
+  ));
 
   return (
     <>
-      <section class={styles.statistics}>
-        {title && <h2 class={styles.title}>{title}</h2>}
-        <ul class={styles.list}>{elements}</ul>
+      <section className={styles.statistics}>
+        {title && <h2 className={styles.title}>{title}</h2>}
+        <ul className={styles.list}>{elements}</ul>
       </section>
     </>
   );
@@ -43,8 +24,12 @@ Statistics.defaultProps = {
 };
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  percentage: PropTypes.number.isRequired,
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
 };

@@ -32,12 +32,3 @@
   gap: 30px;
   border-top: solid 1px gray;
 }
-
-.label {
-  display: block;
-  padding-bottom: 15px;
-}
-
-.quantity {
-  display: block;
-}
