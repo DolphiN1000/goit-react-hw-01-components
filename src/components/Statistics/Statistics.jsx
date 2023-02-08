@@ -3,7 +3,7 @@ import styles from './statistics.module.css';
 import ListItem from './ListItem/ListItem';
 
 const Statistics = ({ title, stats }) => {
-  const elements = stats.map(({id, label, percentage}) => (
+  const elements = stats.map(({ id, label, percentage }) => (
     <ListItem key={id} label={label} percentage={percentage} />
   ));
 
