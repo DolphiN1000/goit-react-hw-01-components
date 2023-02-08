@@ -3,13 +3,13 @@ import styles from './transactionHistory.module.css';
 import TransactionElement from './TransactionElement/TransactionElement';
 
 const TransactionHistory = ({ items }) => {
-  const elements = items.map(item => {
+  const elements = items.map(({id, type, amount,currency}) => {
     return (
       <TransactionElement
-        key={item.id}
-        type={item.type}
-        amount={item.amount}
-        currency={item.currency}
+        key={id}
+        type={type}
+        amount={amount}
+        currency={currency}
       />
     );
   });

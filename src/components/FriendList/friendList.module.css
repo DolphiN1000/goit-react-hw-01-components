@@ -10,30 +10,7 @@
   list-style: none;
   gap: 15px;
 }
-.item {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 5px;
-  border: solid 1px black;
-  border-radius: 15px;
-}
 
-.status_on {
-  display: block;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: green;
-}
-
-.status_off {
-  display: block;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: red;
-}
 
 /* .avatar {
 }
