@@ -3,20 +3,18 @@ import styles from './friendListItem.module.css';
 
 const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
-    <>
-      <li className={styles.item}>
-        <span className={isOnline ? styles.status_on : styles.status_off}>
-          {isOnline}
-        </span>
-        <img
-          className={styles.avatar}
-          src={avatar}
-          alt="User avatar"
-          width="48"
-        />
-        <p className={styles.name}>{name}</p>
-      </li>
-    </>
+    <li className={styles.item}>
+      <span className={isOnline ? styles.status_on : styles.status_off}>
+        {isOnline}
+      </span>
+      <img
+        className={styles.avatar}
+        src={avatar}
+        alt="User avatar"
+        width="48"
+      />
+      <p className={styles.name}>{name}</p>
+    </li>
   );
 };
 
